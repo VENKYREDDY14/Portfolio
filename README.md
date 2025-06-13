@@ -17,7 +17,8 @@ Welcome to my personal portfolio website! Built with **React**, styled using **T
 ## 📸 Preview
 
 ### 🔹 Hero Section with 3D Cube  
-![Hero Section]([./public/images/Hero.png](https://github.com/VENKYREDDY14/Portfolio/blob/main/frontend/public/images/Hero.png?raw=true))
+![Hero Section]([[./public/images/Hero.png](https://github.com/VENKYREDDY14/Portfolio/blob/main/frontend/public/images/Hero.png?raw=true)](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/Hero.png
+))
 
 ### 🔹 About Section with 3D Cube  
 ![About Section]([./Portfolio/blob/main/frontend/public/images/About.png](https://github.com/VENKYREDDY14/Portfolio/blob/main/frontend/public/images/About.png?raw=true))
