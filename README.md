@@ -20,7 +20,7 @@ Welcome to my personal portfolio website! Built with **React**, styled using **T
 ![Hero Section](./public/images/Hero.png)
 
 ### 🔹 About Section with 3D Cube  
-![About Section](./public/images/About.png)
+![About Section](./Portfolio/blob/main/frontend/public/images/About.png)
 
 ### 🔹 Hero Section with 3D Cube  
 ![Projects Section](./public/images/Projects.png)
