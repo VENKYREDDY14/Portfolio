@@ -20,7 +20,7 @@ Welcome to my personal portfolio website! Built with **React**, styled using **T
 ![Hero Section](./public/images/Hero.png)
 
 ### 🔹 About Section with 3D Cube  
-![About Section](./Portfolio/blob/main/frontend/public/images/About.png)
+![About Section](./public/images/About.png)
 
 ### 🔹 Hero Section with 3D Cube  
 ![Projects Section](./public/images/Projects.png)
@@ -51,7 +51,7 @@ cd frontend
    npm install
 3. Start the development server
    npm start
-Navigate to http://localhost:5173 in your browser.
+Navigate to http://localhost:3000 in your browser.
 .
 ├── public/
 │   ├── images/
