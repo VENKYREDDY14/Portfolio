@@ -47,7 +47,7 @@ const AboutSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-sm text-white">
           {/* Total Projects */}
           <div className="bg-[#1e293b] p-6 rounded-lg border border-purple-600 text-center">
-            <div className="text-xl font-bold text-purple-400">3</div>
+            <div className="text-xl font-bold text-purple-400">6</div>
             <p className="text-gray-300">Total Projects</p>
             <p className="text-gray-500 text-xs mt-1">Innovative web solutions crafted</p>
           </div>
