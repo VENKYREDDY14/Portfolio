@@ -17,17 +17,25 @@ Welcome to my personal portfolio website! Built with **React**, styled using **T
 ## 📸 Preview
 
 ### 🔹 Hero Section with 3D Cube  
-![Hero Section](./public/images/Hero.png)
+![Hero Section](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/Hero.png)
+
 
 ### 🔹 About Section with 3D Cube  
+<<<<<<< HEAD
 ![About Section](./public/images/About.png)
+=======
+![About Section](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/About.png)
 
-### 🔹 Hero Section with 3D Cube  
-![Projects Section](./public/images/Projects.png)
-![Projects Section](./public/images/Certificates.png)
+
+### 🔹 Projects Section with 3D Cube  
+![Projects Section](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/Projects.png)
+![Projects Section](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/Certificates.png)
+>>>>>>> f5321be19a3473e7c028c9855cf29da28af28de5
+
 
 ### 🔹 Contact Section with Formspree Integration  
-![Contact Section](./public/images/Contact.png)
+![Contact Section](https://raw.githubusercontent.com/VENKYREDDY14/Portfolio/main/frontend/public/images/Contact.png)
+
 
 ## 🧪 Tech Stack
 
