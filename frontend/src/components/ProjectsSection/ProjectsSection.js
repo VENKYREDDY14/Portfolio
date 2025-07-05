@@ -32,7 +32,7 @@ const projects = [
     description:
       "A healthcare platform for patients to register, login, book, and manage appointments with doctors.",
     github: "https://github.com/VENKYREDDY14/doctor-appointment",
-    live: "https://doctor-appointment-three-pi.vercel.app/,
+    live: "https://doctor-appointment-three-pi.vercel.app/",
   },
   {
     title: "NxtWatch",
