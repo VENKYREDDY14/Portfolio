@@ -3,6 +3,7 @@ import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FolderGit2, Mail, Github, Linkedin, Instagram } from "lucide-react";
+import LottieDisplay from "../LottieDisplay/LottieDisplay";
 
 const HeroSection = () => {
   const typedRef = useRef(null);
@@ -37,14 +38,10 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 text-white "
-    >
+      className="relative max-h-[100vh] py-10 md:py-16 lg:py-20 flex items-center justify-center px-4 md:px-8 lg:px-16 text-white">
       <div className="absolute inset-0 opacity-10 z-0" />
 
-      <div
-        className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10 py-12"
-        data-aos="fade-right"
-      >
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10 py-12" data-aos="fade-right">
         <div className="text-center md:text-left w-full md:w-1/2">
           <h2 className="inline-block bg-purple-900/20 text-pink-400 border border-purple-500 px-4 py-1 text-xs md:text-sm font-medium uppercase tracking-wide rounded-full mb-4">
             Ready to Innovate
@@ -98,11 +95,7 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <div
-            className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4" data-aos="zoom-in" data-aos-delay="200">
             <a
               href="#projects"
               className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 py-3 px-6 rounded-lg font-semibold transition"
@@ -120,13 +113,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-          <img
-            src="/logo192.png"
-            alt="Developer working"
-            className="w-64 sm:w-72 md:w-80 lg:w-96 object-cover rounded-xl shadow-lg"
-          />
-        </div>
+        <LottieDisplay />
       </div>
     </section>
   );

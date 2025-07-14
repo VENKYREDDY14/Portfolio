@@ -112,6 +112,9 @@ const ProjectsSection = () => {
       setDisplayedTab(tab);
       setActiveTab(tab);
       setIsFading(false);
+      setTimeout(() => {
+        AOS.refreshHard();
+      }, 100);
     }, 300);
   };
 
@@ -119,11 +122,11 @@ const ProjectsSection = () => {
     switch (displayedTab) {
       case "Projects":
         return (
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 px-4 sm:px-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-[#2e2e48] p-4 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-purple-600"
+                className="w-full group bg-[#2e2e48] p-4 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-purple-600"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -162,11 +165,11 @@ const ProjectsSection = () => {
         );
       case "Certificates":
         return (
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 px-4 sm:px-6">
             {certificates.map((cert, idx) => (
               <div
                 key={idx}
-                className="relative group overflow-hidden rounded-xl shadow-lg border border-gray-700 bg-[#2e2e48]"
+                className="relative group overflow-hidden rounded-xl shadow-lg border border-gray-700 bg-[#2e2e48] p-2"
                 data-aos="fade-up"
                 data-aos-delay={idx * 100}
               >
@@ -191,7 +194,7 @@ const ProjectsSection = () => {
         );
       case "Tech Stack":
         return (
-          <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-10">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-10 px-4 sm:px-6">
             {techStack.map((tech, index) => (
               <div
                 key={index}
@@ -217,7 +220,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 text-white">
+    <section id="projects" className="py-20 px-4 sm:px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
         <h2
           className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-3"
@@ -231,7 +234,7 @@ const ProjectsSection = () => {
           learning path.
         </p>
 
-        <div className="flex justify-center gap-6 mb-6" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center gap-4 mb-6" data-aos="fade-up">
           {["Projects", "Certificates", "Tech Stack"].map((tab) => (
             <button
               key={tab}
@@ -253,7 +256,7 @@ const ProjectsSection = () => {
         <div
           className={`transition-opacity duration-300 ${
             isFading ? "opacity-0" : "opacity-100"
-          }`}
+          } aos-init aos-animate`}
         >
           {renderTabContent()}
         </div>
