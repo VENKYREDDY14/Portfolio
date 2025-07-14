@@ -1,107 +1,134 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FolderGit2, Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 const HeroSection = () => {
   const typedRef = useRef(null);
-  const canvasRef = useRef();
 
-  // Typed.js animation
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     const typed = new Typed(typedRef.current, {
-      strings: ["Full Stack Developer", "Tech Enthusiast", "Problem Solver"],
-      typeSpeed: 60,
-      backSpeed: 30,
+      strings: [
+        "Driven by code, power, and purpose",
+        "Passionate about UI & UX",
+        "Fuelled by curiosity and creativity",
+        "Crafting full-stack solutions",
+      ],
+      typeSpeed: 50,
+      backSpeed: 20,
       loop: true,
     });
-
     return () => typed.destroy();
   }, []);
 
-  // Three.js setup
-  useEffect(() => {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      canvasRef.current.clientWidth / canvasRef.current.clientHeight,
-      0.1,
-      1000
-    );
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, alpha: true, antialias: true });
-    renderer.setSize(canvasRef.current.clientWidth, canvasRef.current.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshNormalMaterial({ wireframe: false });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    camera.position.z = 3;
-
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = true;
-    controls.enableDamping = true;
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.005;
-      cube.rotation.y += 0.005;
-      controls.update();
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    const handleResize = () => {
-      camera.aspect = canvasRef.current.clientWidth / canvasRef.current.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(canvasRef.current.clientWidth, canvasRef.current.clientHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const techStack = [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Tailwind CSS",
+    "MongoDB",
+    "Express.js",
+    "SQL",
+    "Bootstrap",
+  ];
 
   return (
     <section
-    id="hero"
-    className="relative h-screen flex items-center px-6"
-    style={{
-      backgroundImage: 'url("/images/portfolioBgimg.jpeg")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  >
-    {/* Dark overlay */}
-    <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 text-white "
+    >
+      <div className="absolute inset-0 opacity-10 z-0" />
 
-    {/* Cube at center */}
-    <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-      <div className="w-64 h-64 md:w-72 md:h-72">
-        <canvas ref={canvasRef} className="rounded-xl shadow-2xl" />
-      </div>
-    </div>
-
-    {/* Left content */}
-    <div className="relative z-20 max-w-2xl text-white">
-      <h1 className="text-4xl md:text-4xl font-extrabold mb-4 drop-shadow-md">
-        Venkateswara Reddy
-      </h1>
-      <h2 className="text-indigo-400 text-2xl md:text-2xl font-semibold mb-6">
-        <span ref={typedRef} />
-      </h2>
-      <p className="text-lg md:text-lg mb-8 max-w-[500px] drop-shadow">
-        I'm passionate about building modern, scalable full-stack web applications and user-friendly experiences.
-      </p>
-      <a
-        href="#projects"
-        className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+      <div
+        className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10 py-12"
+        data-aos="fade-right"
       >
-        View My Work
-      </a>
-    </div>
-  </section>
+        <div className="text-center md:text-left w-full md:w-1/2">
+          <h2 className="inline-block bg-purple-900/20 text-pink-400 border border-purple-500 px-4 py-1 text-xs md:text-sm font-medium uppercase tracking-wide rounded-full mb-4">
+            Ready to Innovate
+          </h2>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 leading-tight">
+            MERN stack <span className="text-purple-500">Developer</span>
+          </h1>
+          <h2 className="text-lg md:text-xl mt-2 font-medium text-white min-h-[30px]">
+            <span ref={typedRef} />
+          </h2>
+          <p className="text-base md:text-lg mt-6 text-gray-300">
+            I'm a MERN Stack Developer and Hackathon winner passionate about
+            building impactful web applications.
+          </p>
+
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-6">
+            {techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="bg-[#1f2937] text-gray-200 px-4 py-1 rounded-full text-sm shadow hover:bg-purple-700 transition"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-6 flex items-center justify-center md:justify-start gap-5 text-gray-400 text-xl">
+            <a
+              href="https://github.com/VENKYREDDY14"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-gray-600 rounded-full hover:border-purple-500 hover:text-white transition"
+            >
+              <Github />
+            </a>
+            <a
+              href="https://linkedin.com/in/venkateswara-reddy-yarramreddy-3b252925a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-gray-600 rounded-full hover:border-purple-500 hover:text-white transition"
+            >
+              <Linkedin />
+            </a>
+            <a
+              href="https://instagram.com/venkyreddy18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-gray-600 rounded-full hover:border-purple-500 hover:text-white transition"
+            >
+              <Instagram />
+            </a>
+          </div>
+
+          <div
+            className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <a
+              href="#projects"
+              className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 py-3 px-6 rounded-lg font-semibold transition"
+            >
+              <FolderGit2 className="w-5 h-5" />
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="flex items-center gap-2 border border-purple-500 hover:bg-purple-500 hover:text-white py-3 px-6 rounded-lg font-semibold transition"
+            >
+              <Mail className="w-5 h-5" />
+              Contact
+            </a>
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
+          <img
+            src="/logo192.png"
+            alt="Developer working"
+            className="w-64 sm:w-72 md:w-80 lg:w-96 object-cover rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 
