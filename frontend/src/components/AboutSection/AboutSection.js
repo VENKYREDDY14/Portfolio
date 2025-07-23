@@ -63,7 +63,7 @@ const AboutSection = () => {
             </p>
             <div className="flex gap-4 mt-6">
               <a
-                href="/pdf/venkateswarareddyResume.pdf"
+                href="/pdf/venkateswaraReddyResume.pdf"
                 download
                 className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white py-2 px-4 rounded-md font-medium"
               >
