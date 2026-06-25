@@ -33,15 +33,21 @@ const HeroSection = () => {
     "Express.js",
     "SQL",
     "Bootstrap",
+    "Vue",
+    "Quasar",
   ];
 
   return (
     <section
       id="hero"
-      className="relative max-h-[100vh] py-10 md:py-16 lg:py-20 flex items-center justify-center px-4 md:px-8 lg:px-16 text-white mt-[100px] md:mt-0">
+      className="relative max-h-[100vh] py-10 md:py-16 lg:py-20 flex items-center justify-center px-4 md:px-8 lg:px-16 text-white mt-[100px] md:mt-0"
+    >
       <div className="absolute inset-0 opacity-10 z-0" />
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10 py-12" data-aos="fade-right">
+      <div
+        className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10 py-12"
+        data-aos="fade-right"
+      >
         <div className="text-center md:text-left w-full md:w-1/2">
           <h2 className="inline-block bg-purple-900/20 text-pink-400 border border-purple-500 px-4 py-1 text-xs md:text-sm font-medium uppercase tracking-wide rounded-full mb-4">
             Ready to Innovate
@@ -95,7 +101,11 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex  flex-row items-center justify-center md:justify-start gap-4" data-aos="zoom-in" data-aos-delay="200">
+          <div
+            className="mt-8 flex  flex-row items-center justify-center md:justify-start gap-4"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <a
               href="#projects"
               className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 py-3 px-6 rounded-lg font-semibold transition"

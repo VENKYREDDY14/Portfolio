@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
-import { Mail, Instagram, Github, Phone, Linkedin, Code2 } from "lucide-react";
+import { Instagram, Github, Phone, Linkedin, Code2 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -31,7 +35,9 @@ const ContactSection = () => {
           className="bg-[#1e293b] p-6 rounded-xl shadow-md"
           data-aos="fade-right"
         >
-          <h3 className="text-xl font-semibold mb-4 text-purple-400">Get in Touch</h3>
+          <h3 className="text-xl font-semibold mb-4 text-purple-400">
+            Get in Touch
+          </h3>
           <p className="text-gray-400 text-sm mb-6">
             Have something to discuss? Send me a message and let’s talk.
           </p>
@@ -80,7 +86,9 @@ const ContactSection = () => {
           className="bg-[#1e293b] p-6 rounded-xl shadow-md"
           data-aos="fade-left"
         >
-          <h3 className="text-xl font-semibold mb-4 text-purple-400">Connect With Me</h3>
+          <h3 className="text-xl font-semibold mb-4 text-purple-400">
+            Connect With Me
+          </h3>
           <div className="space-y-4">
             <ContactLink
               icon={<Linkedin className="text-blue-500" />}

@@ -13,21 +13,14 @@ const projects = [
     live: "https://venkynxttrendz.ccbp.tech/",
   },
   {
-    title: "Dental Care",
-    image: "/images/dentalCare.png",
+    title: "ESMOB",
+    image: "/images/esmob-image.png",
     description:
-      "Allows patients to schedule, view appointments; provides secure login and registration for patients, doctors.",
-    github: "https://github.com/VENKYREDDY14/Dental-Care",
-    live: "https://oral-vis-venkys-projects-6be83651.vercel.app/",
+      " Designed and developed a responsive website for a client using React.js and Tailwind CSS.",
+    github: "https://github.com/yogeswar007/project-ESMOB",
+    live: "https://www.esmobtechnologies.com/",
   },
-  {
-    title: "Fruit Mart",
-    image: "/images/FruitMart.png",
-    description:
-      "Developed a full-stack bulk order management web application using React.js, Node.js, Express.js, and MongoDB.",
-    github: "https://github.com/VENKYREDDY14/Fruit-Mart",
-    live: "https://agro-assignment.vercel.app/",
-  },
+
   {
     title: "Prescripto",
     image: "/images/prescripto.png",
@@ -44,6 +37,7 @@ const projects = [
     github: "https://github.com/VENKYREDDY14/nxtWatch",
     live: "https://venkynxtwatch.ccbp.tech/",
   },
+
   {
     title: "Jobby",
     image: "/images/jobby.png",
@@ -51,6 +45,14 @@ const projects = [
       "A job search platform where users can apply for jobs and manage applications.",
     github: "https://github.com/VENKYREDDY14/Jobby-App",
     live: "https://vrjobby.ccbp.tech/",
+  },
+  {
+    title: "Dental Care",
+    image: "/images/dentalCare.png",
+    description:
+      "Allows patients to schedule, view appointments; provides secure login and registration for patients, doctors.",
+    github: "https://github.com/VENKYREDDY14/Dental-Care",
+    live: "https://oral-vis-venkys-projects-6be83651.vercel.app/",
   },
 ];
 
@@ -81,6 +83,16 @@ const certificates = [
     image: "/images/node.jpeg",
     link: "/pdf/nodejs.pdf",
   },
+  {
+    title: "Internship Completion (Kalsoft)",
+    image: "/images/internship-completion-kalsot.png",
+    link: "/pdf/INTERNSHIP COMPLETION LETTER-Venketesh.pdf",
+  },
+  {
+    title: "Internship Completion (Kkrf)",
+    image: "/images/internship-completion-kkrf.png",
+    link: "/pdf/Venke-Certificate (1).pdf",
+  },
 ];
 
 const techStack = [
@@ -94,6 +106,9 @@ const techStack = [
   { name: "Tailwind CSS", image: "/images/tailwindcss.png" },
   { name: "GitHub", image: "/images/git.png" },
   { name: "Python", image: "/images/python3.jpg" },
+  { name: "Typescript", image: "/images/typescript.jpeg" },
+  { name: "Vue", image: "/images/vue.png" },
+  { name: "Quasar", image: "/images/quasar.png" },
 ];
 
 const ProjectsSection = () => {
@@ -234,7 +249,10 @@ const ProjectsSection = () => {
           learning path.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-6" data-aos="fade-up">
+        <div
+          className="flex flex-wrap justify-center gap-4 mb-6"
+          data-aos="fade-up"
+        >
           {["Projects", "Certificates", "Tech Stack"].map((tab) => (
             <button
               key={tab}
