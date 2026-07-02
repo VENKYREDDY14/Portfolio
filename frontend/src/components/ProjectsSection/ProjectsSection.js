@@ -16,7 +16,7 @@ const projects = [
     title: "ESMOB",
     image: "/images/esmob-image.png",
     description:
-      " Designed and developed a responsive website for a client using React.js and Tailwind CSS.",
+      "Designed and developed a responsive website for a client using React.js and Tailwind CSS.",
     github: "https://github.com/yogeswar007/project-ESMOB",
     live: "https://www.esmobtechnologies.com/",
   },
@@ -28,6 +28,14 @@ const projects = [
       "A healthcare platform for patients to register, login, book, and manage appointments with doctors.",
     github: "https://github.com/VENKYREDDY14/doctor-appointment",
     live: "https://doctor-appointment-three-pi.vercel.app/",
+  },
+  {
+    title: "Resume Analyzer",
+    image: "/images/resume-analyzer.png",
+    description:
+      "A resume analysis tool that provides insights and recommendations for improving resumes.",
+    github: "https://github.com/VENKYREDDY14/Resume-Analyzer",
+    live: "https://resume-analyzer-rose-one.vercel.app/",
   },
   {
     title: "NxtWatch",
